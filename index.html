@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Pokedex</h2>
+    
+        <div class="pokemons-box">
+            <div class="pokemon-box">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" />
+                <p>Dito</p>
+            </div><!--pokemon-box-->
+        </div><!--pokemons-box-->
+    </div>
+
+    <script>
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+            .then(response=>response.json())
+            .then(allpokemon => console.log(allpokemon))
+    </script>
+</body>
+</html>
+
