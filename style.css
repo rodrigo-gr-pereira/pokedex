@@ -25,12 +25,16 @@ body{
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .pokemon-box{
+    display: block;
     border-radius: 10px;
-    width: 29%;
-    margin:20px 2%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
     background-color: rgb(230, 230, 230);
 }
 

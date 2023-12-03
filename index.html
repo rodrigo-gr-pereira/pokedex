@@ -11,10 +11,7 @@
         <h2>Pokedex</h2>
     
         <div class="pokemons-box">
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" />
-                <p>Dito</p>
-            </div><!--pokemon-box-->
+            
         </div><!--pokemons-box-->
     </div>
 
@@ -33,7 +30,22 @@
                         pokemons.push({nome: val.name,imagem: pokemonSingle.sprites.front_default});
 
                     if(pokemons.length == 10){
-                        console.log(pokemons)
+
+
+
+                            //Finalizando requisições
+                            let pokemonBoxes = document.querySelector('.pokemons-box'); 
+                                pokemonBoxes.innerHTML = "";
+
+                            //console.log(pokemons)
+                            pokemons.map(function(val){
+                                pokemonBoxes.innerHTML +=`
+                                <div class="pokemon-box">
+                                <img src="`+val.imagem+`" />
+                                <p>`+val.nome+`</p>
+                                </div>`;
+
+                            })        
                     }
                 }) 
                  
